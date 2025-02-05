@@ -1,4 +1,4 @@
-//Inheritance
+//Inheritance :- Funtion Overriding
 
 // // Base/Parent Class
 // class Shape {
