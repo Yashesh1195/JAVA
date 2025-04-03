@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 public class main extends Application {
     @Override
-    public void start(Stage stage) {
+    public void start(Stage primaryStage) {
         Label label = new Label("Hello, JavaFX!");
         StackPane root = new StackPane(label);
-        Scene scene = new Scene(root, 300, 200);
-        stage.setScene(scene);
-        stage.setTitle("JavaFX App");
-        stage.show();
+        Scene scene = new Scene(root, 300, 400);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("JavaFX App");
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
