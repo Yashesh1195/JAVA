@@ -25,7 +25,7 @@ public class Practice_4 extends Application{
             r.setWidth(400);
             r.setHeight(250);
             r.setStroke(Color.BLACK);
-            r.setFill(Color.BEIGE);
+            r.setFill(Color.LIGHTGRAY);
             Scene scene = new Scene(root, 600, 600);
             root.getChildren().addAll( r);
             primaryStage.setTitle("Practice_4");

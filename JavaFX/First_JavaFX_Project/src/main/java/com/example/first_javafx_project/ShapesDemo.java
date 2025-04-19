@@ -26,7 +26,7 @@ public class ShapesDemo extends Application {
 //            Circle c = new Circle();
 //            c.setCenterX(200);
 //            c.setCenterY(200);
-//            c.setRadius(150);
+//            c.setRadius(250);
 //            Ellipse e = new Ellipse();
 //            e.setCenterX(200);
 //            e.setCenterY(200);
