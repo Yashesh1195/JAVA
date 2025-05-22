@@ -41,7 +41,6 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import java.io.FileInputStream;
 
 
@@ -50,11 +49,12 @@ public class Image_ViewDemo extends Application {
     public void start(Stage primaryStage) {
         try {
             StackPane root = new StackPane();
+            //Here the image path written is the absolute path as it contains full path
             FileInputStream inp = new FileInputStream("C:/Users/Admin/Desktop/YASHESH/New folder/REDMI NOTE 8 PRO/g.k/IMG-20201207-WA0054.jpg");
             Image img = new Image(inp);
             ImageView imgview = new ImageView(img);
             Label l = new Label("Snip is : ", imgview);
-            Scene scene = new Scene(root, 800, 800);
+            Scene scene = new Scene(root, 500, 400);
             root.getChildren().add(l);
             primaryStage.setTitle("Image Class");
             primaryStage.setScene(scene);

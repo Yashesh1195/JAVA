@@ -2,7 +2,9 @@ package com.example.first_javafx_project;
 
 import javafx.application.Application;
 import javafx.css.converter.FontConverter;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -22,7 +24,7 @@ public class MouseEventDemo extends Application{
 //            l.setOnMouseClicked(e -> {
 //                l.setTextFill(Color.GREEN);
 //            });
-
+//
 //            l.setOnMousePressed(e -> {
 //                l.setTextFill(Color.RED);
 //            });
@@ -31,18 +33,22 @@ public class MouseEventDemo extends Application{
 //                l.setFont(Font.font(40));
 //            });
 
-            l.setOnMouseEntered(e -> {
-                l.setFont(Font.font(50));
+            l.setOnMouseEntered(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    l.setFont(Font.font(50));
+                }
             });
+
+//            l.setOnMouseEntered(e -> {
+//                l.setFont(Font.font(50));
+//            });
             l.setOnMouseExited(e -> {
                 l.setFont(Font.font(80));
             });
 
-//            Button b = new Button("Click Me!!");
             Scene scene = new Scene(root, 600,  600);
             root.getChildren().add(l);
-//            root.getChildren().add(b);
-//            primaryStage.setTitle("Layout Panes Demo");
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch(Exception e) {

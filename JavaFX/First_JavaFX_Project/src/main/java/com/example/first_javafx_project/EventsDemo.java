@@ -3,17 +3,16 @@ import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.event.EventHandler;
 
+import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.FontWeight;
-import javafx.stage.Stage;
 import javafx.scene.shape.Circle;
-import javafx.scene.text.Text;
-import javafx.scene.text.Font;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.FontWeight;
+import javafx.scene.input.MouseEvent;
 
-import java.sql.SQLOutput;
 
 public class EventsDemo extends Application{
     @Override
@@ -39,9 +38,19 @@ public class EventsDemo extends Application{
         };
 
         c.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
-//        t.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
+        t.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
 
-        Group root = new Group(c, t);
+//        c.setOnMouseClicked(new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent mouseEvent) {
+//                c.setFill(Color.BLACK);
+//                t.setFill(Color.RED);
+//            }
+//        });
+
+
+        Group root = new Group();
+        root.getChildren().addAll(c, t);
         Scene scene = new Scene(root, 700, 400);
         primaryStage.setScene(scene);
         primaryStage.show();

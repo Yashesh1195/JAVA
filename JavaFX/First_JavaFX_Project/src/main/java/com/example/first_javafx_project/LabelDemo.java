@@ -1,7 +1,7 @@
 package com.example.first_javafx_project;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
@@ -10,7 +10,7 @@ public class LabelDemo extends Application{
     @Override
     public void start(Stage primaryStage) {
         try {
-            StackPane root = new StackPane();
+            VBox root = new VBox();
             Label l = new Label("Firstname");
             Button b = new Button("Click Me!!");
             Scene scene = new Scene(root, 500,  500);

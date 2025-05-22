@@ -15,6 +15,10 @@ public class ScrollBarDemo extends Application {
             Label l = new Label("Scroll Bar: ");
             ScrollBar sb = new ScrollBar();
             sb.setOrientation(Orientation.HORIZONTAL);
+//            sb.setMin(0);
+//            sb.setMax(100);
+//            sb.setValue(5);
+//            sb.setOrientation(Orientation.VERTICAL);
             HBox root = new HBox();
             Scene scene = new Scene(root, 500, 300);
             root.getChildren().addAll(l, sb);

@@ -22,9 +22,9 @@ public class Color_Font_Demo extends Application {
             int red = 50;
             int green = 50;
             int blue = 250;
-//            double alpha = 0.9;
-            r.setFill(Color.rgb(red, green, blue));
-//            r.setFill(Color.rgb(red, green, blue, alpha));
+            double alpha = 0.5;
+//            r.setFill(Color.rgb(red, green, blue));
+            r.setFill(Color.rgb(red, green, blue, alpha));
             Scene scene = new Scene(root, 400,400);
             root.getChildren().addAll(l,r);
             primaryStage.setTitle("Color And Font Demo");
