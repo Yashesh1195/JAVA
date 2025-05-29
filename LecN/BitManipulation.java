@@ -1,4 +1,5 @@
 package LecN;
+import java.net.SocketPermission;
 import java.util.*;
 public class BitManipulation {
     public static void main(String args[]) {
@@ -7,14 +8,14 @@ public class BitManipulation {
         //Get Bit
         //=======
         // int n = 5;
-        // int pos = 2;
+        // int pos = 1;
         // int bitMask = 1 << pos;
 
         // if((bitMask & n) == 0) {
-        //     System.out.println("bit was zero");
+        //     System.out.println("Bit is 0");
         // }
         // else {
-        //     System.out.println("bit was one");
+        //     System.out.println("Bit is 1");
         // }
 
         //=======
