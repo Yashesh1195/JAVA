@@ -15,3 +15,5 @@ public class Recursion1 {
         towerOfHanoi(n, "A", "B", "C");
     }
 }
+
+// Time COmplexity: O(2^n - 1) ~= O(2^n)
