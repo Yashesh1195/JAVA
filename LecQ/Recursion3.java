@@ -1,4 +1,5 @@
 //  Find the first and last occurrence of an element using recursion
+// Time COmplexity : O(n)
 public class Recursion3 {
     public static int first = -1;
     public static int last = -1;
