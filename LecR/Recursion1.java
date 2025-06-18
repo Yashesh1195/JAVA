@@ -1,5 +1,5 @@
 //  Print all the permutations of a string
-// Time Complexity :- O(n!)
+// Time Complexity :- O(n*n!) 
 public class Recursion1 {
 
     public static void printPerm(String str, String permutation) {
