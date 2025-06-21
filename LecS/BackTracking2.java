@@ -4,6 +4,7 @@
 // Print all solutions where queens are safe
 // Time complexity - O(n^n)
 
+import java.util.List;
 import java.util.ArrayList;
 
 public class BackTracking2 {
