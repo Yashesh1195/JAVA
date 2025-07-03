@@ -1,0 +1,6 @@
+Stack is a data structure which runs in LIFO manner.
+
+There are basic 3 functions performed on stack:-
+1. PUSH - adds the element in the stack
+2. POP - removes and returns the top element of the stack
+3. PEEK/TOP - Returns the top element of the stack
