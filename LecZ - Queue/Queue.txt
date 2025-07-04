@@ -1,0 +1,9 @@
+Queue
+
+-It is a FIFO data structure
+
+There are basic 3 functions of queue:-
+
+1. Enque - Add
+2. Dequeue - Remove
+3. Front - Peek
