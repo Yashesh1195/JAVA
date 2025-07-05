@@ -64,6 +64,7 @@ public class BinaryTreesYT {
         System.out.print(root.data + " ");
     }
 
+    // Level Order Traversal
     // Time Complexity - O(n)
     // Breadth First Search
     public static void levelorder(Node root) {
@@ -133,6 +134,53 @@ public class BinaryTreesYT {
         return myHeight;
     }
 
+    // Diameter of a tree - Number of nodes in the longest path between any 2 nodes
+    // Approach - 1
+    // Time Complexity - O(n^2)
+    public static int diameter1(Node root) {
+        if(root == null) {
+            return 0;
+        }
+        int diam1 = diameter1(root.left);
+        int diam2 = diameter1(root.right);
+        int diam3 = height(root.left) + height(root.right) + 1;
+        return Math.max(diam3, Math.max(diam1, diam2));
+
+    }
+
+    static class TreeInfo {
+        int ht;
+        int diam;
+
+        TreeInfo(int ht, int diam) {
+            this.ht = ht;
+            this.diam = diam;
+        }
+    }
+
+    // Approach - 2
+    // Time Complexity - O(n)
+    public static TreeInfo diameter2(Node root) {
+        if(root == null) {
+            return new TreeInfo(0, 0);
+        }
+
+        TreeInfo left = diameter2(root.left);
+        TreeInfo right = diameter2(root.right);
+
+        int myHeight = Math.max(left.ht, right.ht) + 1;
+
+        int diam1 = left.diam; 
+        int diam2 = right.diam; 
+        int diam3 = left.ht + right.ht + 1;
+        
+        int mydiam = Math.max(diam3, Math.max(diam1, diam2));
+
+        TreeInfo myInfo = new TreeInfo(myHeight, mydiam);
+        return myInfo;
+
+    }    
+
     public static void main(String[] args) {
         int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
 
@@ -149,9 +197,12 @@ public class BinaryTreesYT {
         // System.out.println();
         // levelorder(root);
 
-        System.out.println(countOfNodes(root));
-        System.out.println(sumOfNodes(root));
-        System.out.println(height(root));
+        System.out.println("Count of Nodes - "+countOfNodes(root));
+        System.out.println("Sum of Nodes - "+sumOfNodes(root));
+        System.out.println("Height of Tree - "+height(root));
+        System.out.println("Diameter of Tree (Approach - 1) - "+diameter1(root));
+        
+        System.out.println("Diameter of Tree (Approach - 2) - "+diameter2(root).diam);
         
     }
 }
