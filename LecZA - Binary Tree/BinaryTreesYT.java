@@ -178,8 +178,11 @@ public class BinaryTreesYT {
 
         TreeInfo myInfo = new TreeInfo(myHeight, mydiam);
         return myInfo;
-
     }    
+
+    // Subtree of another Tree
+    // In Leetcode
+
 
     public static void main(String[] args) {
         int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
@@ -188,14 +191,14 @@ public class BinaryTreesYT {
 
         Node root = tree.buildTree(nodes);
 
-        // System.out.println(root.data);
-        // preorder(root);
-        // System.out.println();
-        // inorder(root);
-        // System.out.println();
-        // postorder(root);
-        // System.out.println();
-        // levelorder(root);
+        System.out.println("Root Node - "+root.data);
+        preorder(root);
+        System.out.println();
+        inorder(root);
+        System.out.println();
+        postorder(root);
+        System.out.println();
+        levelorder(root);
 
         System.out.println("Count of Nodes - "+countOfNodes(root));
         System.out.println("Sum of Nodes - "+sumOfNodes(root));
