@@ -26,7 +26,7 @@ public class Practice_LL_2 {
 
         list.removeIf(num -> num > 25);
 
-        System.out.println("Kist after removing elements >25 : " + list);
+        System.out.println("List after removing elements >25 : " + list);
 
         sc.close();
         
